@@ -1,0 +1,644 @@
+@charset "UTF-8";
+/* CSS Document */
+/* TABLET */
+
+@media screen and (max-width: 1199px)
+
+{
+
+
+/* ------------------------------------
+  #body
+------------------------------------ */
+body{
+    font-family: arial, monospace;
+    font-size: 13px;
+}
+
+
+/* ------------------------------------
+  #header
+------------------------------------ */
+header{
+    position: fixed;
+    width: 30vw;
+    padding-left: 5%;
+    z-index: 990;
+}
+
+span{
+    width: 20vw;
+}
+
+
+/* ------------------------------------
+  #menu
+------------------------------------ */
+    
+/* ------------------------------------
+  #text
+------------------------------------ */
+h1{
+    font-size: 180%;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+h2{
+    font-size: 130%;
+    letter-spacing: 3px;
+    padding-top: 2.5%;
+    padding-left: 1%;
+    padding-bottom: 5px;
+}
+    
+h3{
+    font-size: 100%;
+    padding-top: 1.5%;
+    padding-left: 2%;
+    letter-spacing: 2px;  
+}  
+
+h4{
+    text-align: left;
+    font-size: 120%;
+    letter-spacing: 3px;
+    padding-top: 10%;
+}
+
+h5{
+    text-align: left;
+    font-size: 100%;
+    letter-spacing: 3px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+h6{
+    font-size: 80%;
+    text-indent: 2em;
+    padding-top: 2%;
+    letter-spacing: 2px;  
+} 
+
+p{
+    text-align: justify;
+    text-indent: 1em;
+    letter-spacing: 3px;
+}
+    
+.link{
+    font-size: 80%;
+    letter-spacing: 1.5px;
+    color: blue;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.link_name{
+    font-size: 140%;
+    letter-spacing: 1.5px;
+    color: blue;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.link:hover {
+    background-color: rgba(221, 221, 221, 0.5);
+}
+
+.log{
+    text-align: justify;
+    padding-top: 5%;
+    padding-left: 15%;
+}
+
+article {
+    display: block;
+    width: 100%;
+    height: auto; 
+}
+    
+/* ------------------------------------
+  #common
+------------------------------------ */   
+.main {
+    width: 80vw;
+    margin-left: auto; /* 右寄せにする場合 */
+    margin-left: 5%;   /* 右寄せにする場合 */
+    padding-bottom: 10%;
+    text-align: right; /* テキストを右寄せにしたい場合 */
+    overflow: hidden;  /* 念のため内部要素のはみ出し防止とBFC作成 */
+    z-index: 980;
+}
+
+.mobile {
+    display: block; 
+    text-align: center;
+    max-width: 90%;
+    height: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+}
+
+    
+/* ------------------------------------
+  #img
+------------------------------------ */
+
+.yoko {
+    display: block;
+    width: 100%;
+    height: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+    margin: 5% 0 5% auto;  /* 上5%、右0、下5%、左auto (これで右寄せ) */
+    padding-top: 0;
+}
+
+.tate {
+    display: block;
+    height: auto;          /* 画面の高さの60% (この値は調整可能です) */
+    width: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+    max-width: 100%;
+    max-height: 75vh;
+    margin: 5% 0 5% auto;  /* 上5%、右0、下5%、左auto (これで右寄せ) */
+    padding-top: 0;
+}
+
+.thumbnail {
+    display: block;
+    width: 30vw;
+    height: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+    margin: 0 auto 0 auto;  /* 上5%、右0、下5%、左auto (これで右寄せ) */
+    padding-top: 0;
+}
+
+
+/* ------------------------------------
+  #footer
+------------------------------------ */
+footer{
+    position: fixed;
+    font-size: 90%;
+    width: 100%;
+    text-align: center;
+	background-color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 5px;
+	bottom: 0;
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+
+    /* ハンバーガーボタンの基本スタイル */
+    .mobile-menu-button {
+        display: block; /* モバイルで表示 */
+        position: fixed;
+        bottom: 40px;
+        right: 15px;
+        z-index: 1002;   /* ← 最も手前に */
+        background: none;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+    }
+
+    /* ... (ハンバーガーアイコンの三本線やアニメーションのスタイルは前回提示のものをそのまま利用) ... */
+    .hamburger-icon-bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: #333; /* 線の色 */
+        margin: 5px 0;
+        transition: transform 0.3s ease, opacity 0.3s ease; /* アニメーション用 */
+    }
+
+    .mobile-menu-button[aria-expanded="true"] .hamburger-icon-bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobile-menu-button[aria-expanded="true"] .hamburger-icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+    .mobile-menu-button[aria-expanded="true"] .hamburger-icon-bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* ドロップダウンメニューの基本スタイル */
+.mobile-navigation {
+    /* display: none; */   /* ← display: none; はコメントアウトまたは削除 */
+    visibility: hidden; /* 初期状態は非表示 (アクセス可能だが表示されない) */
+    opacity: 0;         /* 初期状態は透明 */
+    position: fixed;
+    top: 0;
+    right: 0; /* または right: 0; にして右端基準にする */
+    width: 85%; /* 例えば画面幅の80% (お好みで調整) */
+    max-width: 600px; /* 最大幅も設定しておくと良い (お好みで調整) */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98); /* 少し透明度を上げるなど調整 */
+    z-index: 1001;
+    overflow-y: auto;
+    padding-top: 15%; /* ヘッダーの高さなどを考慮 */
+    padding-bottom: 40%; /* ヘッダーの高さなどを考慮 */
+    box-sizing: border-box;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* 右からスライドインする場合、左側に影 (任意) */
+
+    /* アニメーションの設定 */
+    transform: translateX(100%); /* 初期状態: 画面右外に隠す (右からスライドインする場合) */
+                                  /* 左からスライドインなら translateX(-100%) */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0s 0.3s;
+    /* visibility の transition は、閉じるときに即座に隠すため遅延を設定 */
+}
+
+.mobile-navigation.is-open {
+    /* display: block; */ /* ← display: block; はコメントアウトまたは削除 */
+    visibility: visible;  /* 表示する */
+    opacity: 1;           /* 不透明にする */
+    transform: translateX(0); /* 元の位置に戻す (画面内に表示) */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* 開くときは visibility の遅延は不要 */
+}
+    /* モバイルメニュー内のリストやリンクのスタイル */
+    .mobile-navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .mobile-navigation li {
+        padding: 15px 0;
+    }
+
+    .mobile-navigation a {
+        text-decoration: none;
+        color: #333;
+        font-size: 1.2em;
+    }
+
+.mobile-navigation li a {
+    display: block; /* aタグをブロック要素にして、中の要素の配置を制御しやすくする */
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px; /* 上下の余白と、左右の余白を適宜調整 */
+    text-align: center; /* リンク全体のテキストや画像を中央揃えにする場合 */
+}
+
+.menu-item-image {
+    display: block;          /* 画像をブロック要素にして、テキストと縦に並ぶようにする */
+    width: 50px;             /* 画像の幅 (お好みで調整) */
+    height: 50px;            /* 画像の高さ (お好みで調整) */
+    object-fit: cover;
+    margin: 0 auto 8px auto; /* 上マージン0, 左右マージンauto (中央寄せ), 下マージン8px (テキストとの間隔) */
+    border-radius: 4px;
+}
+
+.mobile-navigation li a h3.link {
+    display: block; /* h3もブロック要素に（既に親のaがblockなので影響は少ないが明確化） */
+    margin: 0;      /* デフォルトマージンをリセット */
+    font-size: 1em; /* メニュー内のテキストサイズとして調整 */
+    line-height: 1.3; /* テキストの行間を適度に */
+    /* text-align: center; は親の a タグで設定済みなら不要な場合も */
+}
+
+/* セクションタイトルには画像がないので、レイアウトを合わせるための調整（任意） */
+.mobile-menu-section-title {
+    padding: 15px 0; /* 上下の余白調整 */
+    text-align: center;
+    font-weight: bold; /* 例: セクションタイトルを太字に */
+}
+
+    /* PC用の既存ナビゲーション (spanで囲まれているもの) をモバイルで非表示にする */
+    header > span {
+        display: none;
+    }
+
+}
+
+
+/* ------------------------------------
+  #loading-overlay 
+------------------------------------ */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw; /* プレビューコンテナと同じ幅 */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); /* 白背景で半透明 */
+    z-index: 1001; /* プレビューコンテナより上に表示 */
+    display: flex; /* 中央寄せのためにflexboxを使用 */
+    justify-content: center; /* 水平方向中央寄せ */
+    align-items: center; /* 垂直方向中央寄せ */
+    visibility: hidden; /* 初期状態は非表示 */
+    opacity: 0; /* 初期状態は透明 */
+    transition: opacity 0.3s ease-out, visibility 0s 0.3s; /* フェードアニメーション */
+}
+
+#loading-overlay.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-out; /* 表示時はvisibilityの遅延は不要 */
+}
+
+/* ローディングスピナーのスタイル（例） */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* アニメーション */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+/* CSS Document */
+/* PC */
+
+@media screen and (min-width: 1200px){
+      
+/* PC表示ではハンバーガーボタンとドロップダウンメニューを確実に非表示にする */
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .mobile-navigation {
+        display: none !important; /* JavaScriptでクラスを操作する場合でも確実に隠す */
+    }
+
+    /* PC用の既存ナビゲーション (spanで囲まれているもの) は表示されるようにする */
+    /* (max-width: 799px) で display: none; にした場合、こちらで display: block; や display: initial; などに戻す必要はありません。
+       (max-width: 799px) のメディアクエリが適用されなくなるため、自動的に元の表示に戻ります。 */
+
+/* ------------------------------------
+  #body
+------------------------------------ */
+body{
+    font-family: arial, monospace;
+    font-size: 13px;
+    color: #333333;
+    width: 95vw;
+    height: 95vh;
+    overflow-x: hidden; /* 横スクロールバーを防ぐ */
+}
+
+
+/* ------------------------------------
+  #header
+------------------------------------ */
+header{
+    position: fixed;
+    width: 25vw;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+
+
+
+/* ------------------------------------
+  #text
+------------------------------------ */
+h1{
+    font-size: 140%;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+h2{
+    font-size: 100%;
+    letter-spacing: 3px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+    
+h3{
+    font-size: 80%;
+    letter-spacing: 1.5px;
+    padding-top: 1.5%;
+    padding-bottom: 5px;
+}  
+
+h4{
+    font-size: 140%;
+    letter-spacing: 3px;
+    padding-top: 5%;
+}
+
+h5{
+    text-align: justify;
+    font-size: 100%;
+    letter-spacing: 0.3em;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+h6{
+    font-size: 80%;
+    text-indent: 2em;
+    padding-top: 2%;
+    letter-spacing: 2px;  
+} 
+
+p{
+    text-align: justify;
+    text-indent: 1em;
+    letter-spacing: 3px;
+}
+    
+.link{
+    font-size: 80%;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.link_name{
+    font-size: 140%;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.link:hover {
+    background-color: rgba(221, 221, 221, 0.5);
+}
+
+.log{
+    text-align: justify;
+    padding-top: 5%;
+    padding-left: 70%;
+}
+
+
+/* ------------------------------------
+  #common
+------------------------------------ */
+.main {
+    width: 60vw;
+    margin-left: auto; /* 右寄せにする場合 */
+    margin-right: 5%;   /* 右寄せにする場合 */
+    text-align: right; /* テキストを右寄せにしたい場合 */
+    overflow: hidden;  /* 念のため内部要素のはみ出し防止とBFC作成 */
+}
+
+article {
+    display: block;
+    width: 100%;
+    height: auto; 
+}
+
+span{
+    width: 20vw;
+}
+
+.mobile {
+    display: none; /* モバイル用のスタイルはPCでは非表示 */
+}
+
+    
+/* ------------------------------------
+  #img
+------------------------------------ */
+.yoko {
+    display: block;
+    width: 100%;
+    height: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+    margin: 5% 0 5% auto;  /* 上5%、右0、下5%、左auto (これで右寄せ) */
+    padding-top: 0;
+}
+
+.tate {
+    display: block;
+    height: 80vh;          /* 画面の高さの60% (この値は調整可能です) */
+    width: auto;           /* 高さに合わせて画像の幅は自動調整 (アスペクト比を保つ) */
+    max-width: 80%;       /* 画像の幅が画面幅の90%を超えないようにする (任意、調整可能) */
+    margin: 5% 0 5% auto;  /* 上5%、右0、下5%、左auto (これで右寄せ) */
+    padding-top: 0;
+}
+
+
+/* ------------------------------------
+  #preview-container
+------------------------------------ */
+#preview-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-left: 1px solid #ccc;
+    z-index: 1000;
+    transform: translateX(100%); /* 初期状態は画面外に隠す */
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+    /* フェードイン・フェードアウトの追加 */
+    opacity: 0; /* 初期状態は完全に透明 */
+    visibility: hidden; /* 初期状態は非表示（クリック不可にするため） */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out, visibility 0s 0.3s;
+    /* visibility の transition は、非表示時に即座に隠すため遅延を設定 */
+}
+
+#preview-container.is-active {
+    transform: translateX(0); /* アクティブ時に画面内に表示 */
+    opacity: 1; /* アクティブ時に不透明にする */
+    visibility: visible; /* アクティブ時に表示 */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    /* 表示時は visibility の遅延は不要 */
+}
+
+#preview-iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* iframeの枠線をなくす */
+}
+
+
+/* ------------------------------------
+  #loading-overlay (追加)
+------------------------------------ */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw; /* プレビューコンテナと同じ幅 */
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9); /* 白背景で半透明 */
+    z-index: 1001; /* プレビューコンテナより上に表示 */
+    display: flex; /* 中央寄せのためにflexboxを使用 */
+    justify-content: center; /* 水平方向中央寄せ */
+    align-items: center; /* 垂直方向中央寄せ */
+    visibility: hidden; /* 初期状態は非表示 */
+    opacity: 0; /* 初期状態は透明 */
+    transition: opacity 0.3s ease-out, visibility 0s 0.3s; /* フェードアニメーション */
+}
+
+#loading-overlay.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-out; /* 表示時はvisibilityの遅延は不要 */
+}
+
+/* ローディングスピナーのスタイル（例） */
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite; /* アニメーション */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------------------------
+  #footer
+------------------------------------ */
+footer{
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+	background-color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 5px;
+	position: fixed;
+	bottom: 0;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 990;
+
+}
+
+
+}
+
